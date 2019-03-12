@@ -1,0 +1,8 @@
+{
+  "name": "genlib",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/alexjc/js-genlib",
+  "author": "Alex J. Champandard <alexjc@nucl.ai>",
+  "license": "AGPL-3.0"
+}
