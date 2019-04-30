@@ -7,10 +7,12 @@ class BaseSkill {
   static outputs = [];
 
   get_inputs() {
+    // tslint:disable-next-line:no-angle-bracket-type-assertion
     return (<typeof BaseSkill>this.constructor).inputs;
   }
 
   get_outputs() {
+    // tslint:disable-next-line:no-angle-bracket-type-assertion
     return (<typeof BaseSkill>this.constructor).outputs;
   }
 }
