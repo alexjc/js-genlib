@@ -4,5 +4,20 @@
   "main": "index.js",
   "repository": "https://github.com/alexjc/js-genlib",
   "author": "Alex J. Champandard <alexjc@nucl.ai>",
-  "license": "AGPL-3.0"
+  "license": "AGPL-3.0",
+  "scripts": {
+    "test": "jest --testMatch '**/*.unit.ts'",
+    "test.watch": "jest --testMatch '**/*.unit.ts' --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "i": "^0.3.6",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  }
 }
