@@ -6,6 +6,7 @@
   "author": "Alex J. Champandard <alexjc@nucl.ai>",
   "license": "AGPL-3.0",
   "scripts": {
+    "lint": "tslint -c tests/tslint.json 'genlib/**/*.ts' -t verbose",
     "test": "jest --testMatch '**/*.unit.ts'",
     "test.watch": "jest --testMatch '**/*.unit.ts' --watch"
   },
@@ -15,6 +16,8 @@
     "i": "^0.3.6",
     "jest": "^24.7.1",
     "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.5"
   },
   "jest": {
