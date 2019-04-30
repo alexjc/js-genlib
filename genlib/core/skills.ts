@@ -3,8 +3,8 @@
 import { SkillInput, SkillOutput } from "./schema";
 
 class BaseSkill {
-  static inputs = [];
-  static outputs = [];
+  static inputs: SkillInput[] = [];
+  static outputs: SkillOutput[] = [];
 
   get_inputs() {
     // tslint:disable-next-line:no-angle-bracket-type-assertion
@@ -17,4 +17,4 @@ class BaseSkill {
   }
 }
 
-export { SkillOutput as Output, SkillInput as Input, BaseSkill as Skill };
+export { BaseSkill };
