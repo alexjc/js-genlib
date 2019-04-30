@@ -7,5 +7,6 @@ install:
     - yarn install
 script:
     - yarn test
+    - yarn lint
 after_success:
     - yarn run codecov
