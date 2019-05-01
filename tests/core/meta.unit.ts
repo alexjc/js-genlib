@@ -2,13 +2,15 @@
 
 import { provides, watching } from "../../genlib/core/meta";
 
+/* tslint:disable:no-empty no-string-literal */
+
 describe("provides", () => {
   it("creates a configuration on the object", () => {
     class Test {
       @provides("value") compute() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib).toBeTruthy();
     expect(test._genlib.method_provides).toBeTruthy();
   });
@@ -18,7 +20,7 @@ describe("provides", () => {
       @provides("result") process() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib.method_provides["result"]).toEqual(test.process);
   });
 
@@ -28,7 +30,7 @@ describe("provides", () => {
       @provides("second") second() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib.method_provides["first"]).toEqual(test.first);
     expect(test._genlib.method_provides["second"]).toEqual(test.second);
   });
@@ -40,7 +42,7 @@ describe("watching", () => {
       @watching("value") compute() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib).toBeTruthy();
     expect(test._genlib.methods_watching).toBeTruthy();
   });
@@ -50,7 +52,7 @@ describe("watching", () => {
       @watching("result") process() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib.methods_watching["result"]).toEqual([test.process]);
   });
 
@@ -59,7 +61,7 @@ describe("watching", () => {
       @watching("first") @watching("second") compute() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib.methods_watching["first"]).toEqual([test.compute]);
     expect(test._genlib.methods_watching["second"]).toEqual([test.compute]);
   });
@@ -70,7 +72,7 @@ describe("watching", () => {
       @watching("x") two() {}
     }
 
-    var test: any = new Test();
+    const test: any = new Test();
     expect(test._genlib.methods_watching["x"]).toEqual([test.one, test.two]);
   });
 });

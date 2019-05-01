@@ -8,12 +8,12 @@ describe("base skill", () => {
   });
 
   it("has no outputs", () => {
-    var skill = new BaseSkill();
+    const skill = new BaseSkill();
     expect(skill.get_outputs().length).toBe(0);
   });
 
   it("has no inputs", () => {
-    var skill = new BaseSkill();
+    const skill = new BaseSkill();
     expect(skill.get_inputs().length).toBe(0);
   });
 });
