@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true
-  }
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "lib": ["es2015"],
+    "module": "es2015",
+    "target": "es2015"
+  },
+  "include": ["genlib", "tests"],
+  "exclude": ["node_modules"]
 }
