@@ -3,10 +3,12 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
-    "lib": ["es2015"],
-    "module": "es2015",
-    "target": "es2015"
+    "lib": ["esnext"],
+    "module": "commonjs",
+    "target": "esnext",
+    "outDir": "dist/",
+    "declaration": true
   },
-  "include": ["genlib", "tests"],
+  "include": ["genlib"],
   "exclude": ["node_modules"]
 }

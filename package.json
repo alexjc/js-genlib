@@ -1,19 +1,27 @@
 {
   "name": "genlib",
   "version": "0.1.0",
-  "main": "index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "directories": {
+    "lib": "dist"
+  },
   "repository": "https://github.com/alexjc/js-genlib",
   "author": "Alex J. Champandard <alexjc@nucl.ai>",
   "license": "AGPL-3.0",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "lint": "tslint -c tests/tslint.json -t verbose 'genlib/**/*.ts' 'tests/**/*.ts'",
+    "prepare": "yarn run build",
     "test": "jest --testMatch '**/*.unit.ts'",
     "test.watch": "jest --testMatch '**/*.unit.ts' --watch"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
     "codecov": "^3.3.0",
-    "i": "^0.3.6",
     "jest": "^24.7.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.16.0",
