@@ -3,8 +3,9 @@
   "extends": ["tslint:recommended", "tslint-config-prettier"],
   "jsRules": {},
   "rules": {
-		"member-access": false,
-		"max-classes-per-file": 2
+    "member-access": false,
+    "max-classes-per-file": 2,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-snake-case"]
   },
   "rulesDirectory": []
 }
